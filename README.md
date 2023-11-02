@@ -22,4 +22,4 @@ A Node.js script using Puppeteer to scrape IMDb for a list of movies and generat
 
 
 ## Issues
-Should you have issues setting up or code suggestion reach out to the developer [isaacojerumu@gmail.com](mailto:isaacojerumu@gmail.com)
+Should you have issues setting up or code improvement, please open a PR or reach out to the developer [isaacojerumu@gmail.com](mailto:isaacojerumu@gmail.com)
