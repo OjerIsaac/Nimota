@@ -1,0 +1,16 @@
+{
+  "name": "nimota",
+  "version": "1.0.0",
+  "description": "A simple Node.js script using Puppeteer to scrape IMDb for a list of movies and generating an array of movie objects with specific details.",
+  "main": "main.ts",
+  "author": "Isaac Ojerumu",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@types/node": "^20.8.10",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.5"
+  }
+}
