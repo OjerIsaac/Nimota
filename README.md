@@ -32,18 +32,6 @@ A Node.js script using Puppeteer to scrape IMDb for a list of movies and generat
   <img src="movie_details.jpg" width="100%" alt="" title="image sample">
 </p>
 
-<p align="center">
-  <video src="movie_details.mp4" width="100%" controls alt="" title="Video sample">
-        Your browser does not support the video tag.
-    </video>
-</p>
-
-<p align="center">
-    <video src="Terminal-Preview.mp4" width="100%" controls alt="" title="Video sample">
-        Your browser does not support the video tag.
-    </video>
-</p>
-
 ## Issues
 
 Should you have issues setting up or code improvement, please open a PR or reach out to the developer [isaacojerumu@gmail.com](mailto:isaacojerumu@gmail.com)
