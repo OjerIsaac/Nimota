@@ -16,8 +16,9 @@ async function scrapeMovieDetails() {
   // error: TimeoutError: Waiting for selector `.selector-name` failed: Waiting failed: 30000ms exceeded
   const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
+  const site = "https://www.imdb.com/chart/boxoffice/";
 
-  await page.goto("https://www.imdb.com/chart/boxoffice/");
+  await page.goto(site);
 
   try {
     await page.waitForSelector(
@@ -80,7 +81,7 @@ async function scrapeMovieDetails() {
       } else {
         const errorMessage = `${new Date().toLocaleString()}: Some text content is missing`;
         await fs.appendFile("src/error_log.txt", `${errorMessage}\n`);
-        console.log(`Please check your error_log for generated logs`)
+        console.log(`Please check your error_log for generated logs`);
       }
     }
 
@@ -93,7 +94,7 @@ async function scrapeMovieDetails() {
     } catch (error) {
       const errorMessage = `${new Date().toLocaleString()}: ${error}`;
       await fs.appendFile("src/error_log.txt", `${errorMessage}\n`);
-      console.log(`Please check your error_log for generated logs`)
+      console.log(`Please check your error_log for generated logs`);
     }
 
     // Append new scraped data to the existing array
@@ -104,10 +105,12 @@ async function scrapeMovieDetails() {
       "src/movie_details.json",
       JSON.stringify(existingData, null, 2)
     );
+
+    console.log(`${site} scarped successfully`);
   } catch (error) {
     const errorMessage = `${new Date().toLocaleString()}: ${error}`;
     await fs.appendFile("src/error_log.txt", `${errorMessage}\n`);
-    console.log(`Please check your error_log for generated logs`)
+    console.log(`Please check your error_log for generated logs`);
   }
 
   await browser.close();
