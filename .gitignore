@@ -34,3 +34,4 @@ lerna-debug.log*
 status
 
 *.txt
+src/movie_details.json
