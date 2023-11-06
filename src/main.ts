@@ -79,7 +79,8 @@ async function scrapeMovieDetails() {
         movies.push(movieDetails);
       } else {
         const errorMessage = `${new Date().toLocaleString()}: Some text content is missing`;
-        await fs.appendFile("src/error.txt", `${errorMessage}\n`);
+        await fs.appendFile("src/error_log.txt", `${errorMessage}\n`);
+        console.log(`Please check your error_log for generated logs`)
       }
     }
 
@@ -91,7 +92,8 @@ async function scrapeMovieDetails() {
       existingData = JSON.parse(fileContent);
     } catch (error) {
       const errorMessage = `${new Date().toLocaleString()}: ${error}`;
-      await fs.appendFile("src/error.txt", `${errorMessage}\n`);
+      await fs.appendFile("src/error_log.txt", `${errorMessage}\n`);
+      console.log(`Please check your error_log for generated logs`)
     }
 
     // Append new scraped data to the existing array
@@ -104,7 +106,8 @@ async function scrapeMovieDetails() {
     );
   } catch (error) {
     const errorMessage = `${new Date().toLocaleString()}: ${error}`;
-    await fs.appendFile("src/error.txt", `${errorMessage}\n`);
+    await fs.appendFile("src/error_log.txt", `${errorMessage}\n`);
+    console.log(`Please check your error_log for generated logs`)
   }
 
   await browser.close();
