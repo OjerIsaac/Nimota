@@ -24,11 +24,11 @@ A Node.js script using Puppeteer to scrape IMDb for a list of movies and generat
 
 ## Attachments
 <p align="center">
-  <img src="movies_details.jpg" width="100%" alt="" title="image sample">
+  <img src="movie_details.jpg" width="100%" alt="" title="image sample">
 </p>
 
 <p align="center">
-  <video src="movies_details.mp4" width="100%" alt="" title="image sample">
+  <video src="movie_details.mp4" width="100%" alt="" title="image sample">
 </p>
 
 <p align="center">
