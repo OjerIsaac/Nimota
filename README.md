@@ -23,6 +23,17 @@ A Node.js script using Puppeteer to scrape IMDb for a list of movies and generat
 - Errors are logged in the `error.txt` file
 
 ## Attachments
+<p align="center">
+  <img src="movies_details.jpg" width="100%" alt="" title="image sample">
+</p>
+
+<p align="center">
+  <video src="movies_details.mp4" width="100%" alt="" title="image sample">
+</p>
+
+<p align="center">
+  <video src="Terminal-Preview.mp4" width="100%" alt="" title="image sample">
+</p>
 
 
 ## Issues
