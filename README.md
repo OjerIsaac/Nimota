@@ -16,7 +16,9 @@ A Node.js script using Puppeteer to scrape IMDb for a list of movies and generat
 - Install dependencies
 - `yarn install`
 - Run build
-- `yarn run db:migrate`
+- `yarn run build`
+- Run script
+- `ts-node src/main.ts`
 
 ## Attachments
 
