@@ -8,11 +8,13 @@
   "repository": "git@github.com:OjerIsaac/typescript-nodejs-starter-template.git",
   "private": true,
   "scripts": {
-    "build": "rimraf ./build && tsc"
+    "build": "rimraf ./build && tsc",
+    "start": "ts-node src/main.ts"
   },
   "dependencies": {
     "@types/node": "^20.8.10",
     "puppeteer": "^21.5.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5.2.2"
   },
   "devDependencies": {

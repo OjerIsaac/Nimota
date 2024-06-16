@@ -22,7 +22,7 @@ A Node.js script using Puppeteer to scrape IMDb for a list of movies and generat
 - Run build
 - `yarn run build`
 - Run script
-- `ts-node src/main.ts`
+- `npm start`
 - Result of crawled sites are logged as json file
 - Errors are logged in the `error.txt` file
 

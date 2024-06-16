@@ -12,18 +12,16 @@ interface MovieDetails {
 }
 
 async function scrapeMovieDetails() {
-  // FIXME: headless true or 'new' returns
-  // error: TimeoutError: Waiting for selector `.selector-name` failed: Waiting failed: 30000ms exceeded
   const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
   const site = "https://www.imdb.com/chart/boxoffice/";
 
-  await page.goto(site);
-
   try {
+    await page.goto(site, { waitUntil: "domcontentloaded", timeout: 60000 });
+
     await page.waitForSelector(
       ".ipc-metadata-list--base .ipc-metadata-list-summary-item",
-      { visible: true }
+      { visible: true, timeout: 60000 }
     );
 
     const elements = await page.$$(
@@ -106,14 +104,14 @@ async function scrapeMovieDetails() {
       JSON.stringify(existingData, null, 2)
     );
 
-    console.log(`${site} scarped successfully`);
+    console.log(`${site} scraped successfully`);
   } catch (error) {
     const errorMessage = `${new Date().toLocaleString()}: ${error}`;
     await fs.appendFile("src/error_log.txt", `${errorMessage}\n`);
     console.log(`Please check your error_log for generated logs`);
+  } finally {
+    await browser.close();
   }
-
-  await browser.close();
 }
 
 scrapeMovieDetails();
