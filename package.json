@@ -3,16 +3,18 @@
   "version": "1.0.0",
   "description": "A simple Node.js script using Puppeteer to scrape IMDb for a list of movies and generating an array of movie objects with specific details.",
   "main": "main.js",
+  "type": "module",
   "author": "Isaac Ojerumu",
   "license": "UNLICENSED",
   "repository": "git@github.com:OjerIsaac/typescript-nodejs-starter-template.git",
   "private": true,
   "scripts": {
     "build": "rimraf ./build && tsc",
-    "start": "ts-node src/main.ts"
+    "start": "node --loader ts-node/esm src/idolo.ts"
   },
   "dependencies": {
     "@types/node": "^20.8.10",
+    "chalk": "^5.3.0",
     "puppeteer": "^21.5.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.2.2"

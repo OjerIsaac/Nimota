@@ -35,3 +35,7 @@ status
 
 *.txt
 src/movie_details.json
+.idea
+*.html
+src/categories.ts
+src/idan.ts
